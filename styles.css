@@ -5,8 +5,9 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #f0f0f0;
-    background-color: #121212;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Контейнер для центрирования содержимого */
@@ -14,6 +15,7 @@ body {
     width: 95%;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Заголовок */
@@ -22,20 +24,34 @@ body {
     color: #fff;
     padding: 40px 0;
     text-align: center;
-    border-bottom: 1px solid #333;
+    border-bottom: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 .header .name {
     margin: 0;
-    font-size: 2.2em;
+    font-size: 2.5em;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    background: linear-gradient(90deg, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-text 3s infinite alternate;
 }
 .header .profession {
     margin: 10px 0 0;
     font-size: 1.2em;
     font-style: italic;
     color: #bbb;
+}
+
+/* Анимация для текста заголовка */
+@keyframes gradient-text {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 /* Основной контент */
@@ -46,20 +62,20 @@ body {
     margin-bottom: 20px;
     padding: 15px;
     background: #1c1c1c;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 12px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5), -8px -8px 15px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .about:hover, .contacts:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 .about h2, .contacts h2 {
     color: #fff;
     margin-bottom: 10px;
     border-left: 4px solid #f0f0f0;
     padding-left: 10px;
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 .contacts ul {
     list-style: none;
@@ -74,12 +90,29 @@ body {
     font-weight: bold;
     color: #f0f0f0;
     text-decoration: none;
-    border-bottom: 1px dotted #555;
+    position: relative;
     transition: all 0.3s ease;
 }
 .contacts a:hover {
-    border-bottom: 1px solid #f0f0f0;
     color: #ddd;
+    border-bottom: none;
+}
+.contacts a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #fff, #bbb);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.contacts a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 /* Ссылки */
@@ -99,16 +132,34 @@ a:hover {
     padding: 15px 0;
     margin-top: 20px;
     font-size: 0.9em;
+    border-top: 1px solid #333;
 }
 .footer p {
     margin: 0;
     font-size: 1em;
 }
 
+/* Неоморфные кнопки (для будущих элементов, например, "смена темы") */
+button {
+    background: #1c1c1c;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.1);
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
 /* Адаптивный дизайн для iPhone 12 */
 @media (max-width: 1170px) {
     .header .name {
-        font-size: 2em;
+        font-size: 2.2em;
     }
     .header .profession {
         font-size: 1em;
