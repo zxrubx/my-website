@@ -4,63 +4,62 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #f4f4f9, #eaeff7);
+    color: #f0f0f0;
+    background-color: #121212;
     overflow-x: hidden;
 }
 
 /* Контейнер для центрирования содержимого */
 .container {
-    width: 90%;
-    max-width: 800px;
+    width: 95%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 /* Заголовок */
 .header {
-    background: linear-gradient(135deg, #0078d4, #005bb5);
+    background-color: #1c1c1c;
     color: #fff;
     padding: 40px 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 20px 20px;
+    border-bottom: 1px solid #333;
 }
 .header .name {
     margin: 0;
-    font-size: 2.8em;
+    font-size: 2.2em;
     font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .header .profession {
     margin: 10px 0 0;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-style: italic;
-    opacity: 0.9;
+    color: #bbb;
 }
 
 /* Основной контент */
 .main {
-    padding: 40px 0;
+    padding: 20px 0;
 }
 .about, .contacts {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .about:hover, .contacts:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
 }
 .about h2, .contacts h2 {
-    color: #0078d4;
-    margin-bottom: 15px;
-    border-left: 5px solid #0078d4;
+    color: #fff;
+    margin-bottom: 10px;
+    border-left: 4px solid #f0f0f0;
     padding-left: 10px;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 .contacts ul {
     list-style: none;
@@ -68,18 +67,19 @@ body {
 }
 .contacts li {
     margin: 8px 0;
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1.1em;
+    color: #f0f0f0;
 }
 .contacts a {
     font-weight: bold;
-    color: #0078d4;
+    color: #f0f0f0;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px dotted #555;
     transition: all 0.3s ease;
 }
 .contacts a:hover {
-    border-bottom: 2px solid #0078d4;
+    border-bottom: 1px solid #f0f0f0;
+    color: #ddd;
 }
 
 /* Ссылки */
@@ -88,37 +88,38 @@ a {
     transition: color 0.2s ease;
 }
 a:hover {
-    color: #005bb5;
+    color: #ccc;
 }
 
 /* Футер */
 .footer {
-    background: #333;
-    color: #fff;
+    background: #1c1c1c;
+    color: #aaa;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-top: 5px solid #0078d4;
+    padding: 15px 0;
+    margin-top: 20px;
     font-size: 0.9em;
-    letter-spacing: 1px;
 }
 .footer p {
     margin: 0;
     font-size: 1em;
 }
 
-/* Адаптивный дизайн */
-@media (max-width: 600px) {
+/* Адаптивный дизайн для iPhone 12 */
+@media (max-width: 1170px) {
     .header .name {
-        font-size: 2.2em;
+        font-size: 2em;
     }
     .header .profession {
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .about h2, .contacts h2 {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     .contacts li {
         font-size: 1em;
+    }
+    .container {
+        width: 90%;
     }
 }
