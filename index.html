@@ -28,6 +28,23 @@
                 </ul>
             </section>
 
+            <!-- Форма обратной связи -->
+            <section class="feedback">
+                <h2>Напишите мне</h2>
+                <form action="mailto:a@zaruba-plus.ru" method="post" enctype="text/plain" class="feedback-form">
+                    <label for="name">Ваше имя:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required><br><br>
+
+                    <label for="email">Ваш email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Введите ваш email" required><br><br>
+
+                    <label for="message">Сообщение:</label><br>
+                    <textarea id="message" name="message" rows="5" placeholder="Введите сообщение" required></textarea><br><br>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+
             <!-- Кнопка для перехода на новую страницу -->
             <button onclick="window.location.href='new_page.html'">Перейти на страницу с экспериментом</button>
         </div>
