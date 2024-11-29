@@ -115,62 +115,29 @@ body {
     transform: scaleX(1);
 }
 
-/* Ссылки */
-a {
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-a:hover {
-    color: #ccc;
-}
-
-/* Футер */
-.footer {
-    background: #1c1c1c;
-    color: #aaa;
-    text-align: center;
-    padding: 15px 0;
+/* Форма обратной связи */
+.feedback {
     margin-top: 20px;
-    font-size: 0.9em;
-    border-top: 1px solid #333;
-}
-.footer p {
-    margin: 0;
-    font-size: 1em;
-}
-
-/* Неоморфные кнопки (для будущих элементов, например, "смена темы") */
-button {
+    padding: 15px;
     background: #1c1c1c;
+    border-radius: 12px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5), -8px -8px 15px rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+.feedback-form label {
+    font-size: 1em;
     color: #f0f0f0;
-    padding: 10px 20px;
+}
+.feedback-form input, .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
     border-radius: 8px;
     border: none;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.1);
-    font-size: 1em;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background: #1c1c1c;
+    color: #f0f0f0;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.6), inset -2px -2px 5px rgba(255, 255, 255, 0.1);
 }
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-}
-
-/* Адаптивный дизайн для iPhone 12 */
-@media (max-width: 1170px) {
-    .header .name {
-        font-size: 2.2em;
-    }
-    .header .profession {
-        font-size: 1em;
-    }
-    .about h2, .contacts h2 {
-        font-size: 1.3em;
-    }
-    .contacts li {
-        font-size: 1em;
-    }
-    .container {
-        width: 90%;
-    }
-}
+.feedback-form button {
+    margin-top: 10px;
+    padding: 10p
