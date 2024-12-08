@@ -140,4 +140,29 @@ body {
 }
 .feedback-form button {
     margin-top: 10px;
-    padding: 10p
+    padding: 10p;
+}
+
+/* Стили кнопок */
+button {
+    background: #1c1c1c; /* фон, соответствующий сайту */
+    color: #f0f0f0; /* цвет текста */
+    border: none; /* убираем стандартные границы */
+    border-radius: 8px; /* скругляем углы */
+    padding: 10px 20px; /* внутренние отступы */
+    font-size: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.05); /* тени */
+    cursor: pointer; /* указатель при наведении */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* анимация */
+}
+
+button:hover {
+    background: #2e2e2e; /* немного светлее при наведении */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* эффект свечения */
+}
+
+button:active {
+    background: #0f0f0f; /* темнее при нажатии */
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.6), inset -3px -3px 5px rgba(255, 255, 255, 0.1); /* внутренние тени */
+}
